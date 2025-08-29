@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "a4923932-3a5b-4f18-8015-54b7cca992fb",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "47249581",
+		"_collection_link": "https://nishthammehta-4803395.postman.co/workspace/Nishtha-Mehta's-Workspace~32cdcb5f-6ae4-4bcb-8a37-e8b6076e8d0f/collection/47249581-a4923932-3a5b-4f18-8015-54b7cca992fb?action=share&source=collection_link&creator=47249581"
+	},
+	"item": [
+		{
+			"name": "availability slots user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjEzNzFiNGEwMTJhZjhlNzcxNWIwYSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU2NDUxODEyLCJleHAiOjE3NTY1MzgyMTJ9.lorupHRRpEr_wh3OY_5ppgTXVF5LEkziJ5SZjK_ipL4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2025-08-30\",\r\n  \"startTime\":\"10:30\",\r\n  \"endTime\":\"15:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/availability"
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"admin@gmail.com\",\r\n  \"password\":\"abc123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "slots by date for admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjEzNzFiNGEwMTJhZjhlNzcxNWIwOSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NjQ1MjMxOSwiZXhwIjoxNzU2NTM4NzE5fQ.A3L4h7P2LEfOtgwVfnYaztKUykcqGOLRhCgSRp5iVfE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/admin/slots/2025-08-29"
+			},
+			"response": []
+		}
+	]
+}
